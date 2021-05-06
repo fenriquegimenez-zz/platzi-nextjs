@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar/Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Loading from "../components/Spinner/Loading";
+import Loading from "../components/Loader/Loader";
 
 const Home = () => {
   const [productList, setProductList] = useState([]);
