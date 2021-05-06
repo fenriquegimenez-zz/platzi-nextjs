@@ -3,17 +3,17 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <nav>
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <menu>
-        <ul>
-          <li>
+        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <li className="nav-item">
             <Link href="/">
-              <a>Home</a>
+              <a className="nav-link active">Home</a>
             </Link>
           </li>
-          <li>
+          <li className="nav-item">
             <Link href="/about">
-              <a>About</a>
+              <a className="nav-link active">About</a>
             </Link>
           </li>
         </ul>
