@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar/Navbar";
 import Loader from "../components/Loader/Loader";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Link from "next/link";
 
 const Home = () => {
   const [productList, setProductList] = useState([]);
@@ -38,7 +39,11 @@ const Home = () => {
         productList.map(product => {
           return (
             <ul>
-              <li key={product.id}>{product.name}</li>
+              <Link href={`/products/${product.id}`}>
+                <a>
+                  <li key={product.id}>{product.name}</li>
+                </a>
+              </Link>
             </ul>
           );
         })
