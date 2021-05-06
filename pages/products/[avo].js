@@ -32,13 +32,19 @@ const ProductItem = () => {
         <>
           <h3 className="text-center my-5">{item.name}</h3>
           <br />
+          <div className="text-center">
+            <img
+              alt={item.name}
+              className="img-thumbnail rounded"
+              src={item.image}
+            />
+          </div>
+          <br />
           <p>
             <span className="fw-bold">Price:</span> {item.price} USD
           </p>
-          <p>
-            <span className="fw-bold">Taste:</span> {taste}
-          </p>
           <br />
+          <h3>About this avocado:</h3>
           <p>{description}</p>
         </>
       )}

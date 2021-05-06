@@ -32,26 +32,30 @@ const Home = () => {
   return (
     <div className="container">
       <h1 className="text-center">Avocados list</h1>
-      {loading ? (
-        <Loader />
-      ) : (
-        productList.map(product => {
-          return (
-            <ul className="list-group">
-              <Link href={`/products/${product.id}`}>
+      <div className="card-group text-center">
+        {loading ? (
+          <Loader />
+        ) : (
+          productList.map(product => {
+            return (
+              <Link href={`products/${product.id}`}>
                 <a className="text-decoration-none">
-                  <li
-                    key={product.id}
-                    className="list-group-item link-secondary"
-                  >
-                    {product.name}
-                  </li>
+                  <div className="card m-2">
+                    <img
+                      src={product.image}
+                      className="card-img-top"
+                      alt={product.name}
+                    />
+                    <div className="card-body">
+                      <h5 className="card-title">{product.name}</h5>
+                    </div>
+                  </div>
                 </a>
               </Link>
-            </ul>
-          );
-        })
-      )}
+            );
+          })
+        )}
+      </div>
     </div>
   );
 };
