@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import Navbar from "../../components/Navbar/Navbar";
-import Loader from "../../components/Loader/Loader";
+import Loader from "@components/Loader/Loader";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const ProductItem = () => {
