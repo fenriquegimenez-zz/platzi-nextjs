@@ -26,8 +26,7 @@ const ProductItem = () => {
   } = item;
 
   return (
-    <div className="container">
-      <Navbar />
+    <div>
       {loading ? (
         <Loader />
       ) : (

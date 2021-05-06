@@ -31,7 +31,6 @@ const Home = () => {
 
   return (
     <div className="container">
-      <Navbar />
       <h1 className="text-center">Avocados list</h1>
       {loading ? (
         <Loader />
