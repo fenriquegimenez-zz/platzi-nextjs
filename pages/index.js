@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar/Navbar";
+import Loader from "../components/Loader/Loader";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Loading from "../components/Loader/Loader";
 
 const Home = () => {
   const [productList, setProductList] = useState([]);
@@ -33,7 +33,7 @@ const Home = () => {
       <Navbar />
       <h1 className="text-center">Avocados list</h1>
       {loading ? (
-        <Loading />
+        <Loader />
       ) : (
         productList.map(product => {
           return (
