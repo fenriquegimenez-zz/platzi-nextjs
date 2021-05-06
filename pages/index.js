@@ -38,10 +38,15 @@ const Home = () => {
       ) : (
         productList.map(product => {
           return (
-            <ul>
+            <ul className="list-group">
               <Link href={`/products/${product.id}`}>
-                <a>
-                  <li key={product.id}>{product.name}</li>
+                <a className="text-decoration-none">
+                  <li
+                    key={product.id}
+                    className="list-group-item link-secondary"
+                  >
+                    {product.name}
+                  </li>
                 </a>
               </Link>
             </ul>
