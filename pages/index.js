@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar/Navbar";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Home = () => {
   const [productList, setProductList] = useState([]);
@@ -22,9 +23,9 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
+    <div className="container">
       <Navbar />
-      <h1>Avocados list</h1>
+      <h1 className="text-center">Avocados list</h1>
       {loading ? (
         <p>Loading...</p>
       ) : (
